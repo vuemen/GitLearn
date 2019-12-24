@@ -1,0 +1,16 @@
+说明：命令行后面 () 里面的是可选参数，<> 里面是必需参数
+git init	初始化仓库 会生成 .git 的隐藏目录
+git add <文件名>|<.>	添加修改到暂存区，'.'代表当前目录下所有文件
+git commit -m <提交说明>		提交文件
+git status		查看工作区的状态
+git diff (文件名)		查看文件的修改内容
+git log (--pretty=oneline)		查看日志
+git reset --hard <版本号>		回退到某个版本 HEAD可以代表当前版本，HEAD^标识上一个版本，符号^的个数N表示相对于当前版本的上N个版本，数量太多可以用HEAD~数量代替，如HEAD~100
+git reflog		查看命令历史
+git add把文件添加进去，实际上就是把文件修改添加到暂存区，用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支，所以提交只会提交暂存区里面的内容
+git restore <文件名>		 撤销未提交到暂存区的修改，工作区的修改被还原
+git restore --staged <文件名> 		撤销已经提交到暂存区的修改(相当于清空暂存区关于该文件的内容，实际修改的内容还在工作区)
+git rm <文件名>		提交对某个文件的删除操作到暂存区，之后可以用git commit提交到版本库，或者使用上面两个命令进行撤销操作
+ssh-keygen -t rsa -C "youremail@example.com"		创建SSH Key。在用户主目录下(C:/用户/用户名)，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，没有执行此命令生成。登陆GitHub，打开“Account settings”，“SSH Keys”页面，然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+git remote add <远程库名字> git@server-name:path/repo-name.git	关联远程库
+git push (-u) <远程库名字> master		将本地库推送至远程库，-u使用在第一次推送master分支的所有内容
