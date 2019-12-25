@@ -15,3 +15,11 @@ ssh-keygen -t rsa -C "youremail@example.com"		创建SSH Key。在用户主目录
 git remote add <远程库名字> git@server-name:path/repo-name.git	关联远程库
 git push (-u) <远程库名字> master		将本地库推送至远程库，-u使用在第一次推送master分支的所有内容
 git clone git@github.com:laolaoMonkey/GitLearn.git	克隆远程库
+git branch <分支名称>	创建分支
+git switch <分支名称>	切换到某分支
+git switch -c <分支名称>	创建并切换到某分支，上面两条命令合起来的接单命令
+git branch		列出所有分支，会在当前分支前面显示*号
+git merge <分支名称> 	将某分支的内容合并到指令改命令的分支
+git branch -d <分支名称> 		删除某分支
+Fast-forward		合并时显示信息，代表此次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快，不是每次合并都能Fast-forward
+git log --graph 		查看分支合并图
