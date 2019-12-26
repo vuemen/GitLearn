@@ -23,3 +23,4 @@ git merge <分支名称> 	将某分支的内容合并到指令改命令的分支
 git branch -d <分支名称> 		删除某分支
 Fast-forward		合并时显示信息，代表此次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快，不是每次合并都能Fast-forward
 git log --graph 		查看分支合并图
+git config (--global) user.name 用户名	git config (--global) user.email 邮箱地址		设置签名，带上--global标识设置全局级别的签名，设置项目级别需要在项目目录下执行该命令
