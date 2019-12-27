@@ -1,7 +1,8 @@
+git使用版本号  2.24.1.2  各个版本某些命令会存在差别
 说明：命令行后面 () 里面的是可选参数，<> 里面是必需参数
 git init	初始化仓库 会生成 .git 的隐藏目录
 git add <文件名>|<.>	添加修改到暂存区，'.'代表当前目录下所有文件
-git commit -m <提交说明>		提交文件
+git commit -m <提交说明> (文件名)		提交文件，无文件名表示提交暂存区的所有文件
 git status		查看工作区的状态
 git diff (文件名)		查看文件的修改内容
 git log (--pretty=oneline)		查看日志
@@ -24,3 +25,4 @@ git branch -d <分支名称> 		删除某分支
 Fast-forward		合并时显示信息，代表此次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快，不是每次合并都能Fast-forward
 git log --graph 		查看分支合并图
 git config (--global) user.name 用户名	git config (--global) user.email 邮箱地址		设置签名，带上--global标识设置全局级别的签名，设置项目级别需要在项目目录下执行该命令，设置签名后可以在远程库的提交日志里面看到提交人设置的签名信息
+
